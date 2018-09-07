@@ -1,0 +1,143 @@
+.arenas {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.arena-wrapper {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
+.arena-wrapper:first-child {
+  margin-left: 0;
+}
+
+.arena-wrapper:last-child {
+  margin-right: 0;
+}
+
+.lower-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.skillBoard {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-wrapper {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  max-width: 250px;
+  flex-wrap: wrap;
+}
+
+.skills-wrapper:first-child {
+  margin-left: 0;
+}
+
+.skills-wrapper:last-child {
+  margin-right: 0;
+}
+
+.charInfo {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* @media (max-device-width: 480px) and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arenas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lower-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+.info-wrapper {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.info-wrapper:first-child {
+  margin-left: 0;
+}
+
+.info-wrapper:last-child {
+  margin-right: 0;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+
+.col1 {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 8px;
+  width: 100%;
+  min-width: 235px;
+  border-radius: 4px;
+}
+
+.col1:first-child {
+  margin-left: 0;
+}
+
+.col1:last-child {
+  margin-right: 0;
+}
+
+.col2 {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  min-width: 235px;
+}
+
+.col2:first-child {
+  margin-left: 0;
+}
+
+.col2:last-child {
+  margin-right: 0;
+}

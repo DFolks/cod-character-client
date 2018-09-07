@@ -1,0 +1,8 @@
+.attribute {
+  background: #fafafa;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}

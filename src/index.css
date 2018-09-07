@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  padding: 10px;
+  background: #1976d2;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+h2 {
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+input {
+  display: block;
+}
