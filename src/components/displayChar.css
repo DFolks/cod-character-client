@@ -1,0 +1,65 @@
+.card {
+  background: #fafafa;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(11, 15, 24, 1);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(11, 15, 24, 1);
+  box-shadow: 10px 10 10px 0px rgba(11, 15, 24, 1);
+}
+
+.merit-rating {
+  margin-right: 5px;
+}
+
+.merit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.merit-name-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.displayChar {
+  max-width: 600px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: -15px;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: gold;
+}
+
+.merit-title {
+  font-weight: bold;
+}
+
+.merit-form {
+  display: flex;
+  justify-content: center;
+}
+
+.merit-fieldset {
+  text-align: center;
+}

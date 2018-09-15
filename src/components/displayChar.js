@@ -1,0 +1,655 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import requiresLogin from './requires-login';
+import { fetchSingleCharacter, updateCharacter } from '../actions/character';
+import { Link } from 'react-router-dom';
+import './displayChar.css';
+import Card from './card';
+import AddForm from './add-form';
+import AddMerit from './merit';
+
+export class DisplayChar extends React.Component {
+  componentDidMount() {
+    const id = this.props.match.params.id;
+    this.props.dispatch(fetchSingleCharacter(id));
+  }
+
+  deleteItem(i, path) {
+    const id = this.props.character.id;
+    if (path === 'aspirations') {
+      this.props.character.aspirations = this.props.character.aspirations.filter(
+        (aspiration, index) => index !== i
+      );
+    } else if (path === 'conditions') {
+      this.props.character.conditions = this.props.character.conditions.filter(
+        (condition, index) => index !== i
+      );
+    } else if (path === 'merits') {
+      this.props.character.merits = this.props.character.merits.filter(
+        (merit, index) => index !== i
+      );
+    }
+    this.props
+      .dispatch(updateCharacter(this.props.character))
+      .then(() => this.props.dispatch(fetchSingleCharacter(id)));
+  }
+
+  render() {
+    const char = this.props.character;
+    const conditions = char.conditions.map((condition, index) => {
+      let path = 'conditions';
+      return (
+        <li key={index} className="card">
+          {condition}
+          <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+        </li>
+      );
+    });
+
+    const merits = this.props.character.merits.map((merit, index) => {
+      let path = 'merits';
+      return (
+        <li key={index} className="card merit-card">
+          <div className="merit-name-rating">
+            <span className="merit-title">{merit.name}</span>
+            <span className="merit-rating">
+              Rating:
+              {merit.rating}
+            </span>
+            <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+          </div>
+          <div className="merit-desc">
+            <p>
+              Effect:
+              {merit.description}
+            </p>
+          </div>
+        </li>
+      );
+    });
+
+    const aspirations = char.aspirations.map((aspiration, index) => {
+      let path = 'aspirations';
+      return (
+        <li key={index} className="card">
+          {aspiration}
+          <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+        </li>
+      );
+    });
+
+    return (
+      <div>
+        <Link to="/dashboard">Back to List</Link>
+        <div className="displayChar">
+          <div className="CharacterDisplay">
+            <div className="CharInfo">
+              <h3>BASIC INFORMATION:</h3>
+              <div>
+                <Card
+                  feature={'Name'}
+                  charFeature={char.name}
+                  id={char.id}
+                  body={char}
+                  path={['name']}
+                />
+                <Card
+                  feature={'Age'}
+                  charFeature={char.age}
+                  id={char.id}
+                  body={char}
+                  path={['age']}
+                />
+                <Card
+                  feature={'Player'}
+                  charFeature={char.player}
+                  id={char.id}
+                  body={char}
+                  path={['player']}
+                />
+              </div>
+              <div>
+                <Card
+                  feature={'Virtue'}
+                  charFeature={char.virtue}
+                  id={char.id}
+                  body={char}
+                  path={['virtue']}
+                />
+                <Card
+                  feature={'Vice'}
+                  charFeature={char.vice}
+                  id={char.id}
+                  body={char}
+                  path={['vice']}
+                />
+                <Card
+                  feature={'Concept'}
+                  charFeature={char.concept}
+                  id={char.id}
+                  body={char}
+                  path={['concept']}
+                />
+              </div>
+              <div>
+                <Card
+                  feature={'Chronicle'}
+                  charFeature={char.chronicle}
+                  id={char.id}
+                  body={char}
+                  path={['chronicle']}
+                />
+                <Card
+                  feature={'Faction'}
+                  charFeature={char.faction}
+                  id={char.id}
+                  body={char}
+                  path={['faction']}
+                />
+                <Card
+                  feature={'Group'}
+                  charFeature={char.group}
+                  id={char.id}
+                  body={char}
+                  path={['group']}
+                />
+              </div>
+            </div>
+            <div className="Attributes">
+              <div className="MentalAttr">
+                <h3>MENTAL ATTRIBUTES:</h3>
+                <Card
+                  feature={'Intelligence'}
+                  charFeature={char.attributes.mental.intelligence}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'mental', 'intelligence']}
+                />
+                <Card
+                  feature={'Wits'}
+                  charFeature={char.attributes.mental.wits}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'mental', 'wits']}
+                />
+                <Card
+                  feature={'Resolve'}
+                  charFeature={char.attributes.mental.resolve}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'mental', 'resolve']}
+                />
+              </div>
+              <div className="PhysicalAttr">
+                <h3>PHYSICAL ATTRIBUTES:</h3>
+                <Card
+                  feature={'Strength'}
+                  charFeature={char.attributes.physical.strength}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'physical', 'strength']}
+                />
+                <Card
+                  feature={'Dexterity'}
+                  charFeature={char.attributes.physical.dexterity}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'physical', 'dexterity']}
+                />
+                <Card
+                  feature={'Stamina'}
+                  charFeature={char.attributes.physical.stamina}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'physical', 'stamina']}
+                />
+              </div>
+              <div className="SocialAttr">
+                <h3>SOCIAL ATTRIBUTES:</h3>
+                <Card
+                  feature={'Presence'}
+                  charFeature={char.attributes.social.presence}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'social', 'presence']}
+                />
+                <Card
+                  feature={'Manipulation'}
+                  charFeature={char.attributes.social.manipulation}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'social', 'manipulation']}
+                />
+                <Card
+                  feature={'Composure'}
+                  charFeature={char.attributes.social.composure}
+                  id={char.id}
+                  body={char}
+                  path={['attributes', 'social', 'composure']}
+                />
+              </div>
+            </div>
+            <div className="Skills">
+              <div className="MentalSkills">
+                <h3>MENTAL SKILLS:</h3>
+                <Card
+                  feature={'Academics'}
+                  charFeature={char.skills.mental.academics}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'academics']}
+                />
+                <Card
+                  feature={'Computer'}
+                  charFeature={char.skills.mental.computers}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'computers']}
+                />
+                <Card
+                  feature={'Crafts'}
+                  charFeature={char.skills.mental.crafts}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'crafts']}
+                />
+                <Card
+                  feature={'Investigation'}
+                  charFeature={char.skills.mental.investigation}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'investigation']}
+                />
+                <Card
+                  feature={'Medicine'}
+                  charFeature={char.skills.mental.medicine}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'medicine']}
+                />
+                <Card
+                  feature={'Occult'}
+                  charFeature={char.skills.mental.occult}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'occult']}
+                />
+                <Card
+                  feature={'Politics'}
+                  charFeature={char.skills.mental.politics}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'politics']}
+                />
+                <Card
+                  feature={'Science'}
+                  charFeature={char.skills.mental.science}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'mental', 'science']}
+                />
+              </div>
+              <div className="PhysicalSkills">
+                <h3>PHYSICAL SKILLS:</h3>
+                <Card
+                  feature={'Athletics'}
+                  charFeature={char.skills.physical.athletics}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'athletics']}
+                />
+                <Card
+                  feature={'Brawl'}
+                  charFeature={char.skills.physical.brawl}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'brawl']}
+                />
+                <Card
+                  feature={'Drive'}
+                  charFeature={char.skills.physical.drive}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'drive']}
+                />
+                <Card
+                  feature={'Firearms'}
+                  charFeature={char.skills.physical.firearms}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'firearms']}
+                />
+                <Card
+                  feature={'Larceny'}
+                  charFeature={char.skills.physical.larceny}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'larceny']}
+                />
+                <Card
+                  feature={'Stealth'}
+                  charFeature={char.skills.physical.stealth}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'stealth']}
+                />
+                <Card
+                  feature={'Survival'}
+                  charFeature={char.skills.physical.survival}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'survival']}
+                />
+                <Card
+                  feature={'Weaponry'}
+                  charFeature={char.skills.physical.weaponry}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'physical', 'weaponry']}
+                />
+              </div>
+              <div className="SocialSkills">
+                <h3>SOCIAL SKILLS:</h3>
+                <Card
+                  feature={'Animal Ken'}
+                  charFeature={char.skills.social.animalKen}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'animalKen']}
+                />
+                <Card
+                  feature={'Empathy'}
+                  charFeature={char.skills.social.empathy}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'empathy']}
+                />
+                <Card
+                  feature={'Expression'}
+                  charFeature={char.skills.social.expression}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'expression']}
+                />
+                <Card
+                  feature={'Intimidation'}
+                  charFeature={char.skills.social.intimidation}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'intimidation']}
+                />
+                <Card
+                  feature={'Persuasion'}
+                  charFeature={char.skills.social.persuasion}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'persuasion']}
+                />
+                <Card
+                  feature={'Socialize'}
+                  charFeature={char.skills.social.socialize}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'socialize']}
+                />
+                <Card
+                  feature={'Streetwise'}
+                  charFeature={char.skills.social.streetwise}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'streetwise']}
+                />
+                <Card
+                  feature={'Subterfuge'}
+                  charFeature={char.skills.social.subterfuge}
+                  id={char.id}
+                  body={char}
+                  path={['skills', 'social', 'subterfuge']}
+                />
+              </div>
+            </div>
+            <div className="CombatBlock">
+              <h3>COMBAT STATS:</h3>
+              <div className="card">
+                Size: <span>{char.combatBlock.size}</span>
+              </div>
+              <div className="card">
+                Speed: <span>{char.combatBlock.speed}</span>
+              </div>
+              <div className="card">
+                Defense: <span>{char.combatBlock.defense}</span>
+              </div>
+              <Card
+                feature={'Armor'}
+                charFeature={char.combatBlock.armor}
+                id={char.id}
+                body={char}
+                path={['combatBlock', 'armor']}
+              />
+              <div className="card">
+                Initiative Mod: <span>{char.combatBlock.initiativeMod}</span>
+              </div>
+              <Card
+                feature={'Beats'}
+                charFeature={char.combatBlock.beats}
+                id={char.id}
+                body={char}
+                path={['combatBlock', 'beats']}
+              />
+              <Card
+                feature={'Experience'}
+                charFeature={char.combatBlock.experience}
+                id={char.id}
+                body={char}
+                path={['combatBlock', 'experience']}
+              />
+            </div>
+            <h3>STATUSES:</h3>
+            <div className="Health">
+              <div className="card">
+                Max Health: <span>{char.health.max}</span>
+              </div>
+              <div className="Damage">
+                <Card
+                  feature={'Bashing'}
+                  charFeature={char.health.damage.bashing}
+                  id={char.id}
+                  body={char}
+                  path={['health', 'bashing']}
+                />
+                <Card
+                  feature={'Lethal'}
+                  charFeature={char.health.damage.lethal}
+                  id={char.id}
+                  body={char}
+                  path={['health', 'lethal']}
+                />
+                <Card
+                  feature={'Aggravated'}
+                  charFeature={char.health.damage.aggravated}
+                  id={char.id}
+                  body={char}
+                  path={['health', 'damage', 'aggravated']}
+                />
+              </div>
+            </div>
+            <div className="Willpower">
+              <div className="card">
+                Max Willpower:
+                <span>{char.willpower.max}</span>
+              </div>
+              <Card
+                feature={'Spent Willpower'}
+                charFeature={char.willpower.spent}
+                id={char.id}
+                body={char}
+                path={['willpower', 'spent']}
+              />
+            </div>
+            <div className="Integrity">
+              <Card
+                feature={'Integrity'}
+                charFeature={char.integrity}
+                id={char.id}
+                body={char}
+                path={['integrity']}
+              />
+            </div>
+            <div className="Conditions">
+              <h3>CONDITIONS:</h3>
+              <ul className="conditionList">
+                {conditions}
+                <li>
+                  <AddForm
+                    type="condition"
+                    feature={'Condition'}
+                    charFeature={char.conditions}
+                    id={char.id}
+                    body={char}
+                    path={'conditions'}
+                  />
+                </li>
+              </ul>
+            </div>
+            <div className="Aspirations">
+              <h3>ASPIRATIONS:</h3>
+              <ul className="aspirationList">
+                {aspirations}
+                <li>
+                  <AddForm
+                    type="aspiration"
+                    feature={'Aspiration'}
+                    charFeature={char.aspirations}
+                    id={char.id}
+                    body={char}
+                    path={['aspirations']}
+                  />
+                </li>
+              </ul>
+            </div>
+            <div className="Merits">
+              <h3>MERITS:</h3>
+              <ul className="meritList">
+                {merits}
+                <li>
+                  <AddMerit
+                    type="merit"
+                    feature={'Merit'}
+                    charFeature={char.merits}
+                    id={char.id}
+                    body={char}
+                    path={['merits']}
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <Link to="/dashboard">Back to List</Link>
+      </div>
+    );
+  }
+}
+
+DisplayChar.defaultProps = {
+  character: {
+    name: '',
+    age: 0,
+    player: '',
+    virtue: '',
+    vice: '',
+    concept: '',
+    chronicle: '',
+    faction: '',
+    group: '',
+    attributes: {
+      mental: {
+        intelligence: 1,
+        wits: 1,
+        resolve: 1
+      },
+      physical: {
+        strength: 1,
+        dexterity: 1,
+        stamina: 1
+      },
+      social: {
+        presence: 1,
+        manipulation: 1,
+        composure: 1
+      }
+    },
+    skills: {
+      mental: {
+        academics: 0,
+        computer: 0,
+        crafts: 0,
+        investigation: 0,
+        medicine: 0,
+        occult: 0,
+        politics: 0,
+        science: 0
+      },
+      physical: {
+        athletics: 0,
+        brawl: 0,
+        drive: 0,
+        firearms: 0,
+        larceny: 0,
+        stealth: 0,
+        survival: 0,
+        weaponry: 0
+      },
+      social: {
+        animalKen: 0,
+        empathy: 0,
+        expression: 0,
+        intimidation: 0,
+        persuasion: 0,
+        socialize: 0,
+        streetwise: 0,
+        subterfuge: 0
+      }
+    },
+    combatBlock: {
+      size: 5,
+      speed: 0,
+      defense: 0,
+      armor: 0,
+      initiativeMod: 0,
+      beats: 0,
+      experience: 0
+    },
+    health: {
+      max: 0,
+      damage: {
+        bashing: 0,
+        lethal: 0,
+        aggravated: 0
+      }
+    },
+    willpower: {
+      max: 0,
+      spent: 0
+    },
+    conditions: [],
+    aspirations: [],
+    merits: [
+      {
+        name: '',
+        rating: '',
+        description: ''
+      }
+    ]
+  }
+};
+
+const mapStateToProps = state => {
+  return {
+    id: state.characterData.data,
+    character: state.characterData.character,
+    editing: state.editing
+  };
+};
+
+export default requiresLogin()(connect(mapStateToProps)(DisplayChar));

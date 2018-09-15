@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 // import Welcome from './components/welcome';
 import registerServiceWorker from './registerServiceWorker';
-import CreateCharacter from './components/createChar';
+import App from './components/app';
 import { Provider } from 'react-redux';
 import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <CreateCharacter />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

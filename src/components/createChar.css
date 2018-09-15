@@ -1,143 +1,39 @@
-.arenas {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.arena-wrapper {
-  background: #e0e0e0;
-  margin: 0px;
-  padding: 8px;
-  border-radius: 4px;
-  width: 100%;
-  height: auto;
-}
-
-.arena-wrapper:first-child {
-  margin-left: 0;
-}
-
-.arena-wrapper:last-child {
-  margin-right: 0;
-}
-
-.lower-body {
-  display: flex;
-  flex-direction: row;
-}
-
-.skillBoard {
+.character-creation {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.skills-wrapper {
-  background: #e0e0e0;
-  margin: 0px;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
-  max-width: 250px;
-  flex-wrap: wrap;
-}
-
-.skills-wrapper:first-child {
-  margin-left: 0;
-}
-
-.skills-wrapper:last-child {
-  margin-right: 0;
-}
-
-.charInfo {
-  color: white;
+.character-creation-form {
+  max-width: 600px;
+  margin-top: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.info {
+.form-input {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* @media (max-device-width: 480px) and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  
-
-  .info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .arenas {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .lower-body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .columns {
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
-.info-wrapper {
-  background: #e0e0e0;
-  margin: 0px;
-  padding: 8px;
-  border-radius: 4px;
+label {
+  margin-top: 15px;
+  font-size: 18px;
 }
 
-.info-wrapper:first-child {
-  margin-left: 0;
+legend {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
 }
 
-.info-wrapper:last-child {
-  margin-right: 0;
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }
-
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-basis: auto;
-}
-
-.col1 {
-  background: #e0e0e0;
-  margin: 0px;
-  padding: 8px;
-  width: 100%;
-  min-width: 235px;
-  border-radius: 4px;
-}
-
-.col1:first-child {
-  margin-left: 0;
-}
-
-.col1:last-child {
-  margin-right: 0;
-}
-
-.col2 {
-  background: #e0e0e0;
-  margin: 0px;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
-  min-width: 235px;
-}
-
-.col2:first-child {
-  margin-left: 0;
-}
-
-.col2:last-child {
-  margin-right: 0;
+.save {
+  margin: 10px;
 }

@@ -1,0 +1,38 @@
+.characterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.charListName,
+.newChar {
+  text-decoration: none;
+}
+
+.charListName {
+  margin-top: 5px;
+  color: #333;
+}
+
+.charListName:visited {
+  color: blue;
+}
+
+button {
+  color: white;
+  background-color: darkblue;
+}
+
+.CharacterList {
+  margin-bottom: 20px;
+}
+
+.list-title {
+  margin-bottom: 10px;
+  text-shadow: 2px 2px darkred;
+}
+
+a {
+  text-shadow: 1px 1px darkred;
+}
