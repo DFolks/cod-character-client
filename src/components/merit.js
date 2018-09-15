@@ -1,6 +1,6 @@
 import React from 'react';
 import { updateCharacter, fetchSingleCharacter } from '../actions/character';
-import { Field, reduxForm, reset } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
 import Input from './input';
 import { required, minValue1, maxValue5 } from '../validators';
 
