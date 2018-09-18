@@ -33,9 +33,9 @@ export class AddMerit extends React.Component {
     if (!this.state.editing) {
       const text = `Click here to add a Merit`;
       return (
-        <div className="add-button" onClick={() => this.setEditing(true)}>
+        <nav className="add-button" onClick={() => this.setEditing(true)}>
           <span style={{ color: 'white' }}>{text}</span>
-        </div>
+        </nav>
       );
     }
     return (
@@ -47,35 +47,38 @@ export class AddMerit extends React.Component {
         <fieldset className="merit-fieldset">
           <h3>Add Merit</h3>
           <div>
-            <label htmlFor="merits.name">Name:</label>
             <Field
+              label="Name:"
               className="merit-input"
               component={Input}
               name="merits.name"
               type="text"
               validate={[required]}
+              aria-label="merit name"
             />
           </div>
           <div>
-            <label htmlFor="merits.rating">Rating:</label>
             <Field
+              label="Rating:"
               className="merit-input"
               name="merits.rating"
               component={Input}
               type="number"
               validate={[required, minValue1, maxValue5]}
+              aria-label="merit rating"
             />
           </div>
           <div>
-            <label htmlFor="merits.description">Description:</label>
             <Field
+              label="Description:"
               className="merit-input"
               name="merits.description"
               component={Input}
               type="text"
+              aria-label="merit description"
             />
           </div>
-          <div>
+          <section className="merit-buttons">
             <button
               type="submit"
               disabled={this.props.pristine || this.props.submitting}
@@ -85,7 +88,7 @@ export class AddMerit extends React.Component {
             <button type="button" onClick={() => this.setEditing(false)}>
               Cancel
             </button>
-          </div>
+          </section>
         </fieldset>
       </form>
     );

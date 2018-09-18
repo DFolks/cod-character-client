@@ -7,6 +7,10 @@ export class Card extends React.Component {
     editing: false
   };
 
+  /*Builds an object using the value and path props given 
+  to be structured properly when passed into the dispatch
+  later.
+  */
   setVal = (body, path, val) => {
     if (path.length === 0) {
       return val;
@@ -15,6 +19,13 @@ export class Card extends React.Component {
       [path[0]]: this.setVal(body[path[0]], path.slice(1), val)
     });
   };
+
+  /*When the submit button is clicked change state.editing to 
+  false and then add the new value to the correct property of 
+  the object created by the recursive function above and then 
+  dispatching an update to the database and refreshing the 
+  information displayed on the screen.
+  */
   onSubmit = e => {
     e.preventDefault();
     this.setState({
@@ -45,15 +56,16 @@ export class Card extends React.Component {
             defaultValue={this.props.charFeature}
             ref={input => (this.inputValue = input)}
             required
+            aria-label={this.props.feature}
           />
           <button>Submit</button>
         </form>
       );
     } else {
       return (
-        <div className="card" onClick={this.onClick}>
+        <nav className="card" onClick={this.onClick}>
           {this.props.feature}:<span>{this.props.charFeature}</span>
-        </div>
+        </nav>
       );
     }
   }

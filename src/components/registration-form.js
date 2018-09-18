@@ -25,34 +25,42 @@ export class RegistrationForm extends React.Component {
         <fieldset>
           <legend>Signup</legend>
           <div>
-            <label htmlFor="fullname">Name</label>
-            <Field component={Input} type="text" name="name" />
+            <Field
+              label="Name"
+              component={Input}
+              type="text"
+              name="name"
+              aria-label="name"
+            />
           </div>
           <div>
-            <label htmlFor="username">Username</label>
             <Field
+              label="Username"
               component={Input}
               type="text"
               name="username"
               validate={[required, nonEmpty, isTrimmed]}
+              aria-label="username"
             />
           </div>
           <div>
-            <label htmlFor="password">Password</label>
             <Field
+              label="Password"
               component={Input}
               type="password"
               name="password"
               validate={[required, passwordLength, isTrimmed]}
+              aria-label="password"
             />
           </div>
           <div>
-            <label htmlFor="passwordConfirm">Confirm password</label>
             <Field
+              label="Confirm password"
               component={Input}
               type="password"
               name="passwordConfirm"
               validate={[required, nonEmpty, matchesPassword]}
+              aria-label="confirm password"
             />
           </div>
           <button

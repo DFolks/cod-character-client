@@ -11,10 +11,10 @@ export function Welcome(props) {
   }
 
   return (
-    <div>
+    <section className="welcome">
       <LoginForm />
       <Link to="/register">Click Here to Register</Link>
-    </div>
+    </section>
   );
 }
 

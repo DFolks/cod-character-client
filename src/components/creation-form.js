@@ -147,16 +147,35 @@ export class CharCreateForm extends React.Component {
               type="text"
               name="name"
               validate={[required]}
+              aria-label="character name"
             />
           </div>
           <div>
-            <Field component={Input} label="Age" type="number" name="age" />
+            <Field
+              component={Input}
+              label="Age"
+              type="number"
+              name="age"
+              aria-label="character age"
+            />
           </div>
           <div>
-            <Field label="Virtue" component={Input} type="text" name="virtue" />
+            <Field
+              label="Virtue"
+              component={Input}
+              type="text"
+              name="virtue"
+              aria-label="character virtue"
+            />
           </div>
           <div>
-            <Field label="Vice" component={Input} type="text" name="vice" />
+            <Field
+              label="Vice"
+              component={Input}
+              type="text"
+              name="vice"
+              aria-label="character vice"
+            />
           </div>
           <div>
             <Field
@@ -164,6 +183,7 @@ export class CharCreateForm extends React.Component {
               component={Input}
               type="text"
               name="concept"
+              aria-label="character concept"
             />
           </div>
           <div>
@@ -172,6 +192,7 @@ export class CharCreateForm extends React.Component {
               component={Input}
               type="text"
               name="chronicle"
+              aria-label="chronicle the character is part of"
             />
           </div>
           <div>
@@ -180,6 +201,7 @@ export class CharCreateForm extends React.Component {
               component={Input}
               type="text"
               name="faction"
+              aria-label="faction the character belongs to"
             />
           </div>
           <div>
@@ -194,7 +216,7 @@ export class CharCreateForm extends React.Component {
             Secondary will recieve 4 additional points. And Tertiary will
             recieve 3 additional points.
           </p>
-          <div>
+          <section>
             <h2>Mental</h2>
             <div>
               <Field
@@ -203,6 +225,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="intelligence"
                 validate={[minValue1, maxValue5]}
+                aria-label="Intelligence attribute"
               />
             </div>
             <div>
@@ -212,6 +235,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="wits"
                 validate={[minValue1, maxValue5]}
+                aria-label="wits attribute"
               />
             </div>
             <div>
@@ -221,10 +245,11 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="resolve"
                 validate={[minValue1, maxValue5]}
+                aria-label="resolve attribute"
               />
             </div>
-          </div>
-          <div>
+          </section>
+          <section>
             <h2>Physical</h2>
             <div>
               <Field
@@ -233,6 +258,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="strength"
                 validate={[minValue1, maxValue5]}
+                aria-label="strength attribute"
               />
             </div>
             <div>
@@ -242,6 +268,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="dexterity"
                 validate={[minValue1, maxValue5]}
+                aria-label="dexterity attribute"
               />
             </div>
             <div>
@@ -251,10 +278,11 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="stamina"
                 validate={[minValue1, maxValue5]}
+                aria-label="stamina attribute"
               />
             </div>
-          </div>
-          <div>
+          </section>
+          <section>
             <h2>Social</h2>
             <div>
               <Field
@@ -263,6 +291,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="presence"
                 validate={[minValue1, maxValue5]}
+                aria-label="presence attribute"
               />
             </div>
             <div>
@@ -272,6 +301,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="manipulation"
                 validate={[minValue1, maxValue5]}
+                aria-label="manipulation attribute"
               />
             </div>
             <div>
@@ -281,9 +311,10 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="composure"
                 validate={[minValue1, maxValue5]}
+                aria-label="composure attribute"
               />
             </div>
-          </div>
+          </section>
         </fieldset>
         <fieldset className="skills">
           <legend>Skills</legend>
@@ -292,7 +323,7 @@ export class CharCreateForm extends React.Component {
             Social). Primary will recieve 11 points to distribute. Secondary
             will recieve 7 points. And Tertiary will recieve 4 points.
           </p>
-          <div>
+          <section>
             <h2>Mental</h2>
             <div>
               <Field
@@ -301,6 +332,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="academics"
                 validate={[minValue0, maxValue5]}
+                aria-label="academics skill"
               />
             </div>
             <div>
@@ -310,6 +342,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="computer"
                 validate={[minValue0, maxValue5]}
+                aria-label="computer skill"
               />
             </div>
             <div>
@@ -319,6 +352,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="crafts"
                 validate={[minValue0, maxValue5]}
+                aria-label="crafts skill"
               />
             </div>
             <div>
@@ -328,6 +362,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="investigation"
                 validate={[minValue0, maxValue5]}
+                aria-label="investigation skill"
               />
             </div>
             <div>
@@ -337,6 +372,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="medicine"
                 validate={[minValue0, maxValue5]}
+                aria-label="medicine skill"
               />
             </div>
             <div>
@@ -346,6 +382,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="occult"
                 validate={[minValue0, maxValue5]}
+                aria-label="occult skill"
               />
             </div>
             <div>
@@ -355,6 +392,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="politics"
                 validate={[minValue0, maxValue5]}
+                aria-label="politics skill"
               />
             </div>
             <div>
@@ -364,10 +402,11 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="science"
                 validate={[minValue0, maxValue5]}
+                aria-label="science skill"
               />
             </div>
-          </div>
-          <div>
+          </section>
+          <section>
             <h2>Physical</h2>
             <div>
               <Field
@@ -376,6 +415,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="athletics"
                 validate={[minValue0, maxValue5]}
+                aria-label="athletics skill"
               />
             </div>
             <div>
@@ -385,6 +425,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="brawl"
                 validate={[minValue0, maxValue5]}
+                aria-label="brawl skill"
               />
             </div>
             <div>
@@ -394,6 +435,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="drive"
                 validate={[minValue0, maxValue5]}
+                aria-label="drive skill"
               />
             </div>
             <div>
@@ -403,6 +445,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="firearms"
                 validate={[minValue0, maxValue5]}
+                aria-label="firearms skill"
               />
             </div>
             <div>
@@ -412,6 +455,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="larceny"
                 validate={[minValue0, maxValue5]}
+                aria-label="larceny skill"
               />
             </div>
             <div>
@@ -421,6 +465,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="stealth"
                 validate={[minValue0, maxValue5]}
+                aria-label="stealth skill"
               />
             </div>
             <div>
@@ -430,6 +475,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="survival"
                 validate={[minValue0, maxValue5]}
+                aria-label="survival skill"
               />
             </div>
             <div>
@@ -439,10 +485,11 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="weaponry"
                 validate={[minValue0, maxValue5]}
+                aria-label="weaponry skill"
               />
             </div>
-          </div>
-          <div className="area">
+          </section>
+          <section>
             <h2>Social</h2>
             <div className="first-item">
               <Field
@@ -451,6 +498,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="animalKen"
                 validate={[minValue0, maxValue5]}
+                aria-label="Animal Ken skill"
               />
             </div>
             <div>
@@ -460,6 +508,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="empathy"
                 validate={[minValue0, maxValue5]}
+                aria-label="empathy skill"
               />
             </div>
             <div>
@@ -469,6 +518,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="expression"
                 validate={[minValue0, maxValue5]}
+                aria-label="expression skill"
               />
             </div>
             <div>
@@ -478,6 +528,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="intimidation"
                 validate={[minValue0, maxValue5]}
+                aria-label="intimidation skill"
               />
             </div>
             <div>
@@ -487,6 +538,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="persuasion"
                 validate={[minValue0, maxValue5]}
+                aria-label="persuasion skill"
               />
             </div>
             <div>
@@ -496,6 +548,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="socialize"
                 validate={[minValue0, maxValue5]}
+                aria-label="socialize skill"
               />
             </div>
             <div>
@@ -505,6 +558,7 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="streetwise"
                 validate={[minValue0, maxValue5]}
+                aria-label="streetwise skill"
               />
             </div>
             <div>
@@ -514,13 +568,14 @@ export class CharCreateForm extends React.Component {
                 type="number"
                 name="subterfuge"
                 validate={[minValue0, maxValue5]}
+                aria-label="subterfuge skill"
               />
             </div>
-          </div>
+          </section>
         </fieldset>
         <fieldset className="combat">
           <legend>Combat Block</legend>
-          <div>
+          <section>
             <Field
               label="Size"
               component={Input}
@@ -528,8 +583,9 @@ export class CharCreateForm extends React.Component {
               name="size"
               placeholder="5"
               validate={[maxValue6, minValue4]}
+              aria-label="character size"
             />
-          </div>
+          </section>
         </fieldset>
         <button
           type="submit"

@@ -14,6 +14,8 @@ export class DisplayChar extends React.Component {
     this.props.dispatch(fetchSingleCharacter(id));
   }
 
+  /*Delete the item clicked on from the database and refresh
+  */
   deleteItem(i, path) {
     const id = this.props.character.id;
     if (path === 'aspirations') {
@@ -36,27 +38,37 @@ export class DisplayChar extends React.Component {
 
   render() {
     const char = this.props.character;
+
+    //Map out the conditions array and display them individually
     const conditions = char.conditions.map((condition, index) => {
       let path = 'conditions';
       return (
         <li key={index} className="card">
           {condition}
-          <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+          <button
+            onClick={() => this.deleteItem(index, path)}
+            className="display-delete"
+          >
+            Remove
+          </button>
         </li>
       );
     });
 
-    const merits = this.props.character.merits.map((merit, index) => {
+    //Map out the merits array and display them individually
+    const merits = char.merits.map((merit, index) => {
       let path = 'merits';
       return (
         <li key={index} className="card merit-card">
           <div className="merit-name-rating">
             <span className="merit-title">{merit.name}</span>
-            <span className="merit-rating">
-              Rating:
-              {merit.rating}
-            </span>
-            <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+            <span className="merit-rating">Rating: {merit.rating}</span>
+            <button
+              onClick={() => this.deleteItem(index, path)}
+              className="display-delete"
+            >
+              Remove
+            </button>
           </div>
           <div className="merit-desc">
             <p>
@@ -68,12 +80,18 @@ export class DisplayChar extends React.Component {
       );
     });
 
+    //Map out the aspirations array and display them individually
     const aspirations = char.aspirations.map((aspiration, index) => {
       let path = 'aspirations';
       return (
         <li key={index} className="card">
           {aspiration}
-          <button onClick={() => this.deleteItem(index, path)}>Remove</button>
+          <button
+            onClick={() => this.deleteItem(index, path)}
+            className="display-delete"
+          >
+            Remove
+          </button>
         </li>
       );
     });
@@ -83,7 +101,8 @@ export class DisplayChar extends React.Component {
         <Link to="/dashboard">Back to List</Link>
         <div className="displayChar">
           <div className="CharacterDisplay">
-            <div className="CharInfo">
+            <h2 className="sheet-title">{`${char.name}'s Character Sheet`}</h2>
+            <section className="CharInfo">
               <h3>BASIC INFORMATION:</h3>
               <div>
                 <Card
@@ -154,9 +173,9 @@ export class DisplayChar extends React.Component {
                   path={['group']}
                 />
               </div>
-            </div>
+            </section>
             <div className="Attributes">
-              <div className="MentalAttr">
+              <section className="MentalAttr">
                 <h3>MENTAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Intelligence'}
@@ -179,8 +198,8 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['attributes', 'mental', 'resolve']}
                 />
-              </div>
-              <div className="PhysicalAttr">
+              </section>
+              <section className="PhysicalAttr">
                 <h3>PHYSICAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Strength'}
@@ -203,8 +222,8 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['attributes', 'physical', 'stamina']}
                 />
-              </div>
-              <div className="SocialAttr">
+              </section>
+              <section className="SocialAttr">
                 <h3>SOCIAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Presence'}
@@ -227,10 +246,10 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['attributes', 'social', 'composure']}
                 />
-              </div>
+              </section>
             </div>
             <div className="Skills">
-              <div className="MentalSkills">
+              <section className="MentalSkills">
                 <h3>MENTAL SKILLS:</h3>
                 <Card
                   feature={'Academics'}
@@ -288,8 +307,8 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['skills', 'mental', 'science']}
                 />
-              </div>
-              <div className="PhysicalSkills">
+              </section>
+              <section className="PhysicalSkills">
                 <h3>PHYSICAL SKILLS:</h3>
                 <Card
                   feature={'Athletics'}
@@ -347,8 +366,8 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['skills', 'physical', 'weaponry']}
                 />
-              </div>
-              <div className="SocialSkills">
+              </section>
+              <section className="SocialSkills">
                 <h3>SOCIAL SKILLS:</h3>
                 <Card
                   feature={'Animal Ken'}
@@ -406,9 +425,9 @@ export class DisplayChar extends React.Component {
                   body={char}
                   path={['skills', 'social', 'subterfuge']}
                 />
-              </div>
+              </section>
             </div>
-            <div className="CombatBlock">
+            <section className="CombatBlock">
               <h3>COMBAT STATS:</h3>
               <div className="card">
                 Size: <span>{char.combatBlock.size}</span>
@@ -443,9 +462,9 @@ export class DisplayChar extends React.Component {
                 body={char}
                 path={['combatBlock', 'experience']}
               />
-            </div>
+            </section>
             <h3>STATUSES:</h3>
-            <div className="Health">
+            <section className="Health">
               <div className="card">
                 Max Health: <span>{char.health.max}</span>
               </div>
@@ -472,8 +491,8 @@ export class DisplayChar extends React.Component {
                   path={['health', 'damage', 'aggravated']}
                 />
               </div>
-            </div>
-            <div className="Willpower">
+            </section>
+            <section className="Willpower">
               <div className="card">
                 Max Willpower:
                 <span>{char.willpower.max}</span>
@@ -485,8 +504,8 @@ export class DisplayChar extends React.Component {
                 body={char}
                 path={['willpower', 'spent']}
               />
-            </div>
-            <div className="Integrity">
+            </section>
+            <section className="Integrity">
               <Card
                 feature={'Integrity'}
                 charFeature={char.integrity}
@@ -494,8 +513,8 @@ export class DisplayChar extends React.Component {
                 body={char}
                 path={['integrity']}
               />
-            </div>
-            <div className="Conditions">
+            </section>
+            <section className="Conditions">
               <h3>CONDITIONS:</h3>
               <ul className="conditionList">
                 {conditions}
@@ -510,8 +529,8 @@ export class DisplayChar extends React.Component {
                   />
                 </li>
               </ul>
-            </div>
-            <div className="Aspirations">
+            </section>
+            <section className="Aspirations">
               <h3>ASPIRATIONS:</h3>
               <ul className="aspirationList">
                 {aspirations}
@@ -526,8 +545,8 @@ export class DisplayChar extends React.Component {
                   />
                 </li>
               </ul>
-            </div>
-            <div className="Merits">
+            </section>
+            <section className="Merits">
               <h3>MERITS:</h3>
               <ul className="meritList">
                 {merits}
@@ -542,7 +561,7 @@ export class DisplayChar extends React.Component {
                   />
                 </li>
               </ul>
-            </div>
+            </section>
           </div>
         </div>
         <Link to="/dashboard">Back to List</Link>

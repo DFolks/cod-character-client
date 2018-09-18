@@ -22,6 +22,14 @@
 button {
   color: white;
   background-color: darkblue;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: darkblue;
+  background-color: white;
+  border: 1px solid darkblue;
 }
 
 .CharacterList {
@@ -35,4 +43,21 @@ button {
 
 a {
   text-shadow: 1px 1px darkred;
+}
+
+input {
+  margin: auto;
+  width: 95%;
+  border: 0.5px solid black;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.newChar {
+  transform: all 0.25s ease-out;
+}
+
+.newChar:hover {
+  transform: scale(1.5);
 }

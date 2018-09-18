@@ -9,6 +9,11 @@ export class AddForm extends React.Component {
     editing: false
   };
 
+  /*When the submit button is clicked change state.editing to 
+  false and then add the new value to the correct property of 
+  the object before dispatching an update to the database and 
+  refreshing the information displayed on the screen.
+  */
   onSubmit = event => {
     event.preventDefault();
     this.setState({

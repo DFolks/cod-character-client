@@ -11,6 +11,7 @@ export class Dashboard extends React.Component {
     this.props.dispatch(fetchCharacterData());
   }
 
+  //Deletes selected character from the database and then refreshes list
   deleteChar(id) {
     this.props
       .dispatch(deleteCharacter(id))
@@ -37,10 +38,10 @@ export class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
-        <div className="CharacterList">
+        <section className="CharacterList">
           <h2 className="list-title">Character List</h2>
           <ul>{characters}</ul>
-        </div>
+        </section>
         <Link to={`/createChar`} className="newChar">
           Create New Character
         </Link>

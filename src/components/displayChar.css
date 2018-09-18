@@ -6,6 +6,7 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   -webkit-box-shadow: 10px 10px 10px 0px rgba(11, 15, 24, 1);
   -moz-box-shadow: 10px 10px 10px 0px rgba(11, 15, 24, 1);
   box-shadow: 10px 10 10px 0px rgba(11, 15, 24, 1);
@@ -13,6 +14,7 @@
 
 .merit-rating {
   margin-right: 5px;
+  font-weight: bold;
 }
 
 .merit-card {
@@ -22,12 +24,17 @@
 }
 
 .merit-name-rating {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
+}
+
+.display-delete {
+  margin-top: 0px;
 }
 
 .displayChar {
@@ -38,17 +45,26 @@ h3 {
   margin-top: 20px;
 }
 
-h2 {
+.sheet-title {
+  margin-bottom: 10px;
+  text-shadow: 2px 2px darkred;
+}
+
+.characterDisplay h2 {
   margin-top: 20px;
-  margin-bottom: -15px;
 }
 
 a {
   color: white;
+  transition: all 0.25s ease-in-out;
 }
 
 a:visited {
   color: gold;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 .merit-title {
@@ -62,4 +78,9 @@ a:visited {
 
 .merit-fieldset {
   text-align: center;
+}
+
+.merit-buttons {
+  display: flex;
+  justify-content: space-around;
 }

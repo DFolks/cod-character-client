@@ -8,6 +8,7 @@ import Dashboard from './dashboard';
 import CreateChar from './createChar';
 import RegistrationPage from './registration-page';
 import DisplayChar from './displayChar';
+import LandingPage from './landingPage';
 import { refreshAuthToken } from '../actions/auth';
 
 export class App extends React.Component {
@@ -40,14 +41,15 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <main className="app" role="main">
         <HeaderBar />
-        <Route exact path="/" component={Welcome} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/login" component={Welcome} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/createChar" component={CreateChar} />
         <Route exact path="/character/:id" component={DisplayChar} />
-      </div>
+      </main>
     );
   }
 }

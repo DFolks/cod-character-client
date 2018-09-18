@@ -2,15 +2,11 @@ header {
   color: white;
 }
 
-.welcome {
+.registration {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-a {
-  text-decoration: none;
 }
 
 button {
@@ -19,11 +15,4 @@ button {
 
 fieldset {
   margin-top: 10px;
-}
-
-.form-error {
-  text-align: center;
-  color: red;
-  background-color: black;
-  font-size: 18px;
 }

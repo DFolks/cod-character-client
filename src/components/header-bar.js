@@ -22,7 +22,7 @@ export class HeaderBar extends React.Component {
       );
     }
     return (
-      <div className="header-bar">
+      <div className="header-bar" role="marquee">
         <h1>CoD 2nd Edition Character Management System</h1>
         {logOutButton}
       </div>
