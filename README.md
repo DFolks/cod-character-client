@@ -6,8 +6,10 @@ It allows them to create an account within which they can create, store, edit, a
 characters.
 
 DEPLOYED:
+https://cod-characters-client.herokuapp.com
 
 SCREENSHOTS:
+![alt text](https://gyazo.com/2b18f18280a0eee08730783e47910196 "Landing Page")
 Landing page: https://gyazo.com/2b18f18280a0eee08730783e47910196
 Registration: https://gyazo.com/9c2507c0edf8f2ef48b5337ed0c23c5c
 Login: https://gyazo.com/ec3f5084480e4806c5cd4af389f00d56
