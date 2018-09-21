@@ -1,10 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './landingPage.css';
 
-export class LandingPage extends React.Component {
+export default class LandingPage extends React.Component {
   render() {
     return (
       <aside className="landingPage">
@@ -87,5 +86,3 @@ export class LandingPage extends React.Component {
     );
   }
 }
-
-export default connect()(LandingPage);
