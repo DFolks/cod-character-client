@@ -30,7 +30,7 @@ Edit a Field: https://gyazo.com/1cd99067bfda8f4d99c7735812f3974c
 
 Add Conditions/Aspirations: https://gyazo.com/fd4ce7c6495314897043542e03781b0c
 
-Add Merits: https://gyazo.com/fd4ce7c6495314897043542e03781b0c
+Add Merits: https://gyazo.com/e701597219474b2e99da50768b612f43
 
 
 STACK:
