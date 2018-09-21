@@ -2,3 +2,12 @@
   margin-bottom: 10px;
   text-shadow: 2px 2px darkred;
 }
+
+.card {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.continue {
+  margin: 0 auto;
+}
