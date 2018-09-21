@@ -131,6 +131,7 @@ export class CharCreateForm extends React.Component {
 
   render() {
     if (this.state.redirectToNewPage) {
+      this.setState({ redirectToNewPage: false });
       return <Redirect to="/dashboard" />;
     }
     return (

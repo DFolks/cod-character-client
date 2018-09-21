@@ -6,6 +6,7 @@ import { required, nonEmpty } from '../validators';
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
+    console.log(this.props);
     return this.props.dispatch(login(values.username, values.password));
   }
 
@@ -51,6 +52,7 @@ export class LoginForm extends React.Component {
           <button
             disabled={this.props.pristine || this.props.submitting}
             className="login-button"
+            type="submit"
           >
             Log In
           </button>
