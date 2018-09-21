@@ -6,8 +6,5 @@
 .card {
   margin: 0 auto;
   max-width: 800px;
-}
-
-.continue {
-  margin: 0 auto;
+  margin-bottom: 25px;
 }
