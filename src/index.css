@@ -1,9 +1,32 @@
+@font-face {
+  font-family: 'Goudy';
+  src: url(./fonts/Goudy.eot);
+  src: url(./fonts/Goudy.eot?#iefix) format('embedded-opentype'),
+    url(./fonts/Goudy.woff2) format('woff2'),
+    url(./fonts/Goudy.woff) format('woff'),
+    url(./fonts/Goudy.ttf) format('truetype'),
+    url(./fonts/Goudy.svg#Goudy) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Escalido';
+  src: url(./fonts/EscalidoGothico.eot);
+  src: url(./fonts/EscalidoGothico.eot?#iefix) format('embedded-opentype'),
+    url(./fonts/EscalidoGothico.woff2) format('woff2'),
+    url(./fonts/EscalidoGothico.woff) format('woff'),
+    url(./fonts/EscalidoGothico.ttf) format('truetype'),
+    url(./fonts/EscalidoGothico.svg#EscalidoGothico) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
 }
 
 body {
-  display: flex;
   justify-content: center;
   font-family: sans-serif;
   padding: 10px;
@@ -11,7 +34,9 @@ body {
 }
 
 h2,
-h3 {
+h3,
+legend {
+  font-family: 'Escalido';
   margin: 0;
 }
 
@@ -28,4 +53,11 @@ ul {
 
 input {
   display: block;
+}
+
+a,
+span,
+button {
+  font-family: 'Goudy';
+  font-weight: bold;
 }

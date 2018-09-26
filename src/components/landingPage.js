@@ -7,7 +7,7 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <aside className="landingPage">
-        <section>
+        <section className="About">
           <h2 className="landingPage-title">Purpose</h2>
           <p className="card">
             Hello and welcome to Chronicles of Darkness Second Edition Character
@@ -16,7 +16,7 @@ export default class LandingPage extends React.Component {
             characters for this roleplaying game.
           </p>
         </section>
-        <section>
+        <section className="loggingIn">
           <h2 className="landingPage-title">Login/Register</h2>
           <p className="card">
             When you click the link at the bottom you'll be taken to a page that
@@ -30,7 +30,7 @@ export default class LandingPage extends React.Component {
             "password".
           </p>
         </section>
-        <section>
+        <section className="listCharacters">
           <h2 className="landingPage-title">The Character List Page Use</h2>
           <p className="card">
             Upon logging in, you'll be taken to a page that lists your
@@ -41,7 +41,7 @@ export default class LandingPage extends React.Component {
             the form to generate a new character.
           </p>
         </section>
-        <section>
+        <section className="CreateNew">
           <h2 className="landingPage-title">The Creation Form Use</h2>
           <p className="card">
             On this page, you'll find a form that allows you to enter
@@ -51,7 +51,7 @@ export default class LandingPage extends React.Component {
             on the stats selected during character creation.
           </p>
         </section>
-        <section>
+        <section className="characterSheetInfo">
           <h2 className="landingPage-title">The Character Sheet Use</h2>
           <p className="card">
             On this page your character's information will be displayed. The
@@ -77,7 +77,7 @@ export default class LandingPage extends React.Component {
             other stats.
           </p>
         </section>
-        <section>
+        <section className="landingPageContinue">
           <Link to={`/login`} className="continue">
             Continue to Login/Registration
           </Link>

@@ -8,3 +8,28 @@
   max-width: 800px;
   margin-bottom: 25px;
 }
+
+body {
+  min-height: 100%;
+  background-attachment: fixed;
+  background-image: url(../images/dark-city-1998-setting-shot.jpeg);
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainBody {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-family: 'Goudy';
+  font-weight: bold;
+}
+
+.landingPageContinue {
+  text-align: center;
+}

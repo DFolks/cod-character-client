@@ -17,6 +17,22 @@ button {
   margin-top: 15px;
 }
 
+input {
+  font-family: 'Goudy';
+}
+
+label {
+  color: white;
+  font-family: 'Escalido';
+  text-shadow: red 1px 1px;
+  font-weight: bold;
+}
+
+legend {
+  color: white;
+  text-shadow: red 1px 1px;
+}
+
 fieldset {
   margin-top: 10px;
 }

@@ -64,7 +64,8 @@ export class Card extends React.Component {
     } else {
       return (
         <nav className="card" onClick={this.onClick}>
-          {this.props.feature}:<span>{this.props.charFeature}</span>
+          <span>{this.props.feature}:</span>
+          <span>{this.props.charFeature}</span>
         </nav>
       );
     }

@@ -43,6 +43,8 @@
 
 h3 {
   margin-top: 20px;
+  text-shadow: red 1px 1px;
+  color: white;
 }
 
 .sheet-title {

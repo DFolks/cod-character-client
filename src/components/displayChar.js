@@ -44,7 +44,7 @@ export class DisplayChar extends React.Component {
       let path = 'conditions';
       return (
         <li key={index} className="card">
-          {condition}
+          <span>{condition}</span>
           <button
             onClick={() => this.deleteItem(index, path)}
             className="display-delete"
@@ -85,7 +85,7 @@ export class DisplayChar extends React.Component {
       let path = 'aspirations';
       return (
         <li key={index} className="card">
-          {aspiration}
+          <span>{aspiration}</span>
           <button
             onClick={() => this.deleteItem(index, path)}
             className="display-delete"

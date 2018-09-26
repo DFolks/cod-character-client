@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+h2 {
+  text-shadow: red 1px 1px;
+}
+
 label {
   margin-top: 15px;
   font-size: 18px;

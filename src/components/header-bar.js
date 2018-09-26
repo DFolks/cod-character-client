@@ -20,6 +20,7 @@ export class HeaderBar extends React.Component {
           Log out
         </button>
       );
+    } else {
     }
     return (
       <div className="header-bar" role="marquee">
