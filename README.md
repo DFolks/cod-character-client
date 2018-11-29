@@ -14,24 +14,21 @@ https://cod-characters-client.herokuapp.com
 
 SCREENSHOTS:
 
-Landing page: https://gyazo.com/2b18f18280a0eee08730783e47910196
+Landing page: https://i.gyazo.com/bdab8795dcd9830925c1289e5f50d87d.jpg
 
-Registration: https://gyazo.com/9c2507c0edf8f2ef48b5337ed0c23c5c
+Registration: https://i.gyazo.com/11f89c232bab20aec4334d9b56cf99d1.jpg
 
-Login: https://gyazo.com/ec3f5084480e4806c5cd4af389f00d56
+Login: https://i.gyazo.com/f55e53aa8ef5ebedd4ef3583dedab161.jpg
 
-Dashboard: https://gyazo.com/082cf371436d0a862d851add178ff367
+Dashboard: https://i.gyazo.com/7ca6793c77922545c9879cc5e33b4afd.jpg
 
-Character Creation: https://gyazo.com/b7900dfdc8d682da5cab5f958405bce7
+Character Creation: https://i.gyazo.com/3b4bf23539e4a31ffb42b760c35715ff.jpg
 
-Character Sheet: https://gyazo.com/37b3e0e7444e15915856eadd6f440d75
+Character Sheet: https://i.gyazo.com/64bc9fea295742ebd3e37ab2aa1eac4b.jpg
 
-Edit a Field: https://gyazo.com/1cd99067bfda8f4d99c7735812f3974c
+Edit a Field: https://i.gyazo.com/6d424257b6f0cea7f45f623b65e941ec.png
 
-Add Conditions/Aspirations: https://gyazo.com/fd4ce7c6495314897043542e03781b0c
-
-Add Merits: https://gyazo.com/e701597219474b2e99da50768b612f43
-
+Add Conditions/Aspirations: https://i.gyazo.com/3b7b378e241173a79b51923df76ae2e8.png
 
 STACK:
 
