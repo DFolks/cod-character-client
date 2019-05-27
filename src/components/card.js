@@ -33,7 +33,6 @@ export class Card extends React.Component {
     });
 
     const body = this.props.body;
-    console.log(body);
     const val = this.inputValue.value;
     const path = this.props.path;
     const id = this.props.id;
