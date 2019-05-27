@@ -182,21 +182,21 @@ export class DisplayChar extends React.Component {
                   charFeature={char.intelligence}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'intelligence']}
+                  path={['intelligence']}
                 />
                 <Card
                   feature={'Wits'}
                   charFeature={char.wits}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'wits']}
+                  path={['wits']}
                 />
                 <Card
                   feature={'Resolve'}
                   charFeature={char.resolve}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'resolve']}
+                  path={['resolve']}
                 />
               </section>
               <section className="PhysicalAttr">
@@ -206,21 +206,21 @@ export class DisplayChar extends React.Component {
                   charFeature={char.strength}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'strength']}
+                  path={['strength']}
                 />
                 <Card
                   feature={'Dexterity'}
                   charFeature={char.dexterity}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'dexterity']}
+                  path={['dexterity']}
                 />
                 <Card
                   feature={'Stamina'}
                   charFeature={char.stamina}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'stamina']}
+                  path={['stamina']}
                 />
               </section>
               <section className="SocialAttr">
@@ -230,21 +230,21 @@ export class DisplayChar extends React.Component {
                   charFeature={char.presence}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'presence']}
+                  path={['presence']}
                 />
                 <Card
                   feature={'Manipulation'}
                   charFeature={char.manipulation}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'manipulation']}
+                  path={['manipulation']}
                 />
                 <Card
                   feature={'Composure'}
                   charFeature={char.composure}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'composure']}
+                  path={['composure']}
                 />
               </section>
             </div>
@@ -256,56 +256,56 @@ export class DisplayChar extends React.Component {
                   charFeature={char.academics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'academics']}
+                  path={['academics']}
                 />
                 <Card
                   feature={'Computer'}
                   charFeature={char.computers}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'computers']}
+                  path={['computers']}
                 />
                 <Card
                   feature={'Crafts'}
                   charFeature={char.crafts}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'crafts']}
+                  path={['crafts']}
                 />
                 <Card
                   feature={'Investigation'}
                   charFeature={char.investigation}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'investigation']}
+                  path={['investigation']}
                 />
                 <Card
                   feature={'Medicine'}
                   charFeature={char.medicine}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'medicine']}
+                  path={['medicine']}
                 />
                 <Card
                   feature={'Occult'}
                   charFeature={char.occult}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'occult']}
+                  path={['occult']}
                 />
                 <Card
                   feature={'Politics'}
                   charFeature={char.politics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'politics']}
+                  path={['politics']}
                 />
                 <Card
                   feature={'Science'}
                   charFeature={char.science}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'science']}
+                  path={['science']}
                 />
               </section>
               <section className="PhysicalSkills">
@@ -315,56 +315,56 @@ export class DisplayChar extends React.Component {
                   charFeature={char.athletics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'athletics']}
+                  path={['athletics']}
                 />
                 <Card
                   feature={'Brawl'}
                   charFeature={char.brawl}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'brawl']}
+                  path={['brawl']}
                 />
                 <Card
                   feature={'Drive'}
                   charFeature={char.drive}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'drive']}
+                  path={['drive']}
                 />
                 <Card
                   feature={'Firearms'}
                   charFeature={char.firearms}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'firearms']}
+                  path={['firearms']}
                 />
                 <Card
                   feature={'Larceny'}
                   charFeature={char.larceny}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'larceny']}
+                  path={['larceny']}
                 />
                 <Card
                   feature={'Stealth'}
                   charFeature={char.stealth}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'stealth']}
+                  path={['stealth']}
                 />
                 <Card
                   feature={'Survival'}
                   charFeature={char.survival}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'survival']}
+                  path={['survival']}
                 />
                 <Card
                   feature={'Weaponry'}
                   charFeature={char.weaponry}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'weaponry']}
+                  path={['weaponry']}
                 />
               </section>
               <section className="SocialSkills">
@@ -374,56 +374,56 @@ export class DisplayChar extends React.Component {
                   charFeature={char.animalKen}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'animalKen']}
+                  path={['animalKen']}
                 />
                 <Card
                   feature={'Empathy'}
                   charFeature={char.empathy}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'empathy']}
+                  path={['empathy']}
                 />
                 <Card
                   feature={'Expression'}
                   charFeature={char.expression}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'expression']}
+                  path={['expression']}
                 />
                 <Card
                   feature={'Intimidation'}
                   charFeature={char.intimidation}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'intimidation']}
+                  path={['intimidation']}
                 />
                 <Card
                   feature={'Persuasion'}
                   charFeature={char.persuasion}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'persuasion']}
+                  path={['persuasion']}
                 />
                 <Card
                   feature={'Socialize'}
                   charFeature={char.socialize}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'socialize']}
+                  path={['socialize']}
                 />
                 <Card
                   feature={'Streetwise'}
                   charFeature={char.streetwise}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'streetwise']}
+                  path={['streetwise']}
                 />
                 <Card
                   feature={'Subterfuge'}
                   charFeature={char.subterfuge}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'subterfuge']}
+                  path={['subterfuge']}
                 />
               </section>
             </div>
@@ -443,7 +443,7 @@ export class DisplayChar extends React.Component {
                 charFeature={char.armor}
                 id={char.id}
                 body={char}
-                path={['combatBlock', 'armor']}
+                path={['armor']}
               />
               <div className="card">
                 Initiative Mod: <span>{char.initiativeMod}</span>
@@ -453,7 +453,7 @@ export class DisplayChar extends React.Component {
                 charFeature={char.beats}
                 id={char.id}
                 body={char}
-                path={['combatBlock', 'beats']}
+                path={['beats']}
               />
               <Card
                 feature={'Experience'}

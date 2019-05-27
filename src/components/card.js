@@ -11,14 +11,14 @@ export class Card extends React.Component {
   to be structured properly when passed into the dispatch
   later.
   */
-  // setVal = (body, path, val) => {
-  //   if (path.length === 0) {
-  //     return val;
-  //   }
-  //   return Object.assign({}, body, {
-  //     [path[0]]: this.setVal(body[path[0]], path.slice(1), val)
-  //   });
-  // };
+  setVal = (body, path, val) => {
+    if (path.length === 0) {
+      return val;
+    }
+    return Object.assign({}, body, {
+      [path[0]]: this.setVal(body[path[0]], path.slice(1), val)
+    });
+  };
 
   /*When the submit button is clicked change state.editing to 
   false and then add the new value to the correct property of 
@@ -35,9 +35,10 @@ export class Card extends React.Component {
     const body = this.props.body;
     console.log(body);
     const val = this.inputValue.value;
+    const path = this.props.path;
     const id = this.props.id;
     this.props
-      .dispatch(updateCharacter(body, val))
+      .dispatch(updateCharacter(this.setVal(body, path, val)))
       .then(() => this.props.dispatch(fetchSingleCharacter(id)));
   };
 
