@@ -15,7 +15,7 @@ export class DisplayChar extends React.Component {
   }
 
   /*Delete the item clicked on from the database and refresh
-  */
+   */
   deleteItem(i, path) {
     const id = this.props.character.id;
     if (path === 'aspirations') {
@@ -179,72 +179,72 @@ export class DisplayChar extends React.Component {
                 <h3>MENTAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Intelligence'}
-                  charFeature={char.attributes.mental.intelligence}
+                  charFeature={char.intelligence}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'intelligence']}
+                  path={['intelligence']}
                 />
                 <Card
                   feature={'Wits'}
-                  charFeature={char.attributes.mental.wits}
+                  charFeature={char.wits}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'wits']}
+                  path={['wits']}
                 />
                 <Card
                   feature={'Resolve'}
-                  charFeature={char.attributes.mental.resolve}
+                  charFeature={char.resolve}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'mental', 'resolve']}
+                  path={['resolve']}
                 />
               </section>
               <section className="PhysicalAttr">
                 <h3>PHYSICAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Strength'}
-                  charFeature={char.attributes.physical.strength}
+                  charFeature={char.strength}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'strength']}
+                  path={['strength']}
                 />
                 <Card
                   feature={'Dexterity'}
-                  charFeature={char.attributes.physical.dexterity}
+                  charFeature={char.dexterity}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'dexterity']}
+                  path={['dexterity']}
                 />
                 <Card
                   feature={'Stamina'}
-                  charFeature={char.attributes.physical.stamina}
+                  charFeature={char.stamina}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'physical', 'stamina']}
+                  path={['stamina']}
                 />
               </section>
               <section className="SocialAttr">
                 <h3>SOCIAL ATTRIBUTES:</h3>
                 <Card
                   feature={'Presence'}
-                  charFeature={char.attributes.social.presence}
+                  charFeature={char.presence}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'presence']}
+                  path={['presence']}
                 />
                 <Card
                   feature={'Manipulation'}
-                  charFeature={char.attributes.social.manipulation}
+                  charFeature={char.manipulation}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'manipulation']}
+                  path={['manipulation']}
                 />
                 <Card
                   feature={'Composure'}
-                  charFeature={char.attributes.social.composure}
+                  charFeature={char.composure}
                   id={char.id}
                   body={char}
-                  path={['attributes', 'social', 'composure']}
+                  path={['composure']}
                 />
               </section>
             </div>
@@ -253,214 +253,214 @@ export class DisplayChar extends React.Component {
                 <h3>MENTAL SKILLS:</h3>
                 <Card
                   feature={'Academics'}
-                  charFeature={char.skills.mental.academics}
+                  charFeature={char.academics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'academics']}
+                  path={['academics']}
                 />
                 <Card
                   feature={'Computer'}
-                  charFeature={char.skills.mental.computers}
+                  charFeature={char.computers}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'computers']}
+                  path={['computers']}
                 />
                 <Card
                   feature={'Crafts'}
-                  charFeature={char.skills.mental.crafts}
+                  charFeature={char.crafts}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'crafts']}
+                  path={['crafts']}
                 />
                 <Card
                   feature={'Investigation'}
-                  charFeature={char.skills.mental.investigation}
+                  charFeature={char.investigation}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'investigation']}
+                  path={['investigation']}
                 />
                 <Card
                   feature={'Medicine'}
-                  charFeature={char.skills.mental.medicine}
+                  charFeature={char.medicine}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'medicine']}
+                  path={['medicine']}
                 />
                 <Card
                   feature={'Occult'}
-                  charFeature={char.skills.mental.occult}
+                  charFeature={char.occult}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'occult']}
+                  path={['occult']}
                 />
                 <Card
                   feature={'Politics'}
-                  charFeature={char.skills.mental.politics}
+                  charFeature={char.politics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'politics']}
+                  path={['politics']}
                 />
                 <Card
                   feature={'Science'}
-                  charFeature={char.skills.mental.science}
+                  charFeature={char.science}
                   id={char.id}
                   body={char}
-                  path={['skills', 'mental', 'science']}
+                  path={['science']}
                 />
               </section>
               <section className="PhysicalSkills">
                 <h3>PHYSICAL SKILLS:</h3>
                 <Card
                   feature={'Athletics'}
-                  charFeature={char.skills.physical.athletics}
+                  charFeature={char.athletics}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'athletics']}
+                  path={['athletics']}
                 />
                 <Card
                   feature={'Brawl'}
-                  charFeature={char.skills.physical.brawl}
+                  charFeature={char.brawl}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'brawl']}
+                  path={['brawl']}
                 />
                 <Card
                   feature={'Drive'}
-                  charFeature={char.skills.physical.drive}
+                  charFeature={char.drive}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'drive']}
+                  path={['drive']}
                 />
                 <Card
                   feature={'Firearms'}
-                  charFeature={char.skills.physical.firearms}
+                  charFeature={char.firearms}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'firearms']}
+                  path={['firearms']}
                 />
                 <Card
                   feature={'Larceny'}
-                  charFeature={char.skills.physical.larceny}
+                  charFeature={char.larceny}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'larceny']}
+                  path={['larceny']}
                 />
                 <Card
                   feature={'Stealth'}
-                  charFeature={char.skills.physical.stealth}
+                  charFeature={char.stealth}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'stealth']}
+                  path={['stealth']}
                 />
                 <Card
                   feature={'Survival'}
-                  charFeature={char.skills.physical.survival}
+                  charFeature={char.survival}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'survival']}
+                  path={['survival']}
                 />
                 <Card
                   feature={'Weaponry'}
-                  charFeature={char.skills.physical.weaponry}
+                  charFeature={char.weaponry}
                   id={char.id}
                   body={char}
-                  path={['skills', 'physical', 'weaponry']}
+                  path={['weaponry']}
                 />
               </section>
               <section className="SocialSkills">
                 <h3>SOCIAL SKILLS:</h3>
                 <Card
                   feature={'Animal Ken'}
-                  charFeature={char.skills.social.animalKen}
+                  charFeature={char.animalKen}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'animalKen']}
+                  path={['animalKen']}
                 />
                 <Card
                   feature={'Empathy'}
-                  charFeature={char.skills.social.empathy}
+                  charFeature={char.empathy}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'empathy']}
+                  path={['empathy']}
                 />
                 <Card
                   feature={'Expression'}
-                  charFeature={char.skills.social.expression}
+                  charFeature={char.expression}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'expression']}
+                  path={['expression']}
                 />
                 <Card
                   feature={'Intimidation'}
-                  charFeature={char.skills.social.intimidation}
+                  charFeature={char.intimidation}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'intimidation']}
+                  path={['intimidation']}
                 />
                 <Card
                   feature={'Persuasion'}
-                  charFeature={char.skills.social.persuasion}
+                  charFeature={char.persuasion}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'persuasion']}
+                  path={['persuasion']}
                 />
                 <Card
                   feature={'Socialize'}
-                  charFeature={char.skills.social.socialize}
+                  charFeature={char.socialize}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'socialize']}
+                  path={['socialize']}
                 />
                 <Card
                   feature={'Streetwise'}
-                  charFeature={char.skills.social.streetwise}
+                  charFeature={char.streetwise}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'streetwise']}
+                  path={['streetwise']}
                 />
                 <Card
                   feature={'Subterfuge'}
-                  charFeature={char.skills.social.subterfuge}
+                  charFeature={char.subterfuge}
                   id={char.id}
                   body={char}
-                  path={['skills', 'social', 'subterfuge']}
+                  path={['subterfuge']}
                 />
               </section>
             </div>
             <section className="CombatBlock">
               <h3>COMBAT STATS:</h3>
               <div className="card">
-                Size: <span>{char.combatBlock.size}</span>
+                Size: <span>{char.size}</span>
               </div>
               <div className="card">
-                Speed: <span>{char.combatBlock.speed}</span>
+                Speed: <span>{char.speed}</span>
               </div>
               <div className="card">
-                Defense: <span>{char.combatBlock.defense}</span>
+                Defense: <span>{char.defense}</span>
               </div>
               <Card
                 feature={'Armor'}
-                charFeature={char.combatBlock.armor}
+                charFeature={char.armor}
                 id={char.id}
                 body={char}
-                path={['combatBlock', 'armor']}
+                path={['armor']}
               />
               <div className="card">
-                Initiative Mod: <span>{char.combatBlock.initiativeMod}</span>
+                Initiative Mod: <span>{char.initiativeMod}</span>
               </div>
               <Card
                 feature={'Beats'}
-                charFeature={char.combatBlock.beats}
+                charFeature={char.beats}
                 id={char.id}
                 body={char}
-                path={['combatBlock', 'beats']}
+                path={['beats']}
               />
               <Card
                 feature={'Experience'}
-                charFeature={char.combatBlock.experience}
+                charFeature={char.experience}
                 id={char.id}
                 body={char}
-                path={['combatBlock', 'experience']}
+                path={['experience']}
               />
             </section>
             <h3>STATUSES:</h3>
@@ -572,73 +572,6 @@ export class DisplayChar extends React.Component {
 
 DisplayChar.defaultProps = {
   character: {
-    name: '',
-    age: 0,
-    player: '',
-    virtue: '',
-    vice: '',
-    concept: '',
-    chronicle: '',
-    faction: '',
-    group: '',
-    attributes: {
-      mental: {
-        intelligence: 1,
-        wits: 1,
-        resolve: 1
-      },
-      physical: {
-        strength: 1,
-        dexterity: 1,
-        stamina: 1
-      },
-      social: {
-        presence: 1,
-        manipulation: 1,
-        composure: 1
-      }
-    },
-    skills: {
-      mental: {
-        academics: 0,
-        computer: 0,
-        crafts: 0,
-        investigation: 0,
-        medicine: 0,
-        occult: 0,
-        politics: 0,
-        science: 0
-      },
-      physical: {
-        athletics: 0,
-        brawl: 0,
-        drive: 0,
-        firearms: 0,
-        larceny: 0,
-        stealth: 0,
-        survival: 0,
-        weaponry: 0
-      },
-      social: {
-        animalKen: 0,
-        empathy: 0,
-        expression: 0,
-        intimidation: 0,
-        persuasion: 0,
-        socialize: 0,
-        streetwise: 0,
-        subterfuge: 0
-      }
-    },
-    combatBlock: {
-      size: 5,
-      speed: 0,
-      defense: 0,
-      armor: 0,
-      initiativeMod: 0,
-      beats: 0,
-      experience: 0
-    },
     health: {
       max: 0,
       damage: {

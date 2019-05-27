@@ -65,55 +65,39 @@ export class CharCreateForm extends React.Component {
     } = values;
     const character = {
       name,
-      attributes: {
-        mental: {
-          intelligence,
-          wits,
-          resolve
-        },
-        physical: {
-          strength,
-          dexterity,
-          stamina
-        },
-        social: {
-          presence,
-          manipulation,
-          composure
-        }
-      },
-      skills: {
-        mental: {
-          academics,
-          computer,
-          crafts,
-          investigation,
-          medicine,
-          occult,
-          politics,
-          science
-        },
-        physical: {
-          athletics,
-          brawl,
-          drive,
-          firearms,
-          larceny,
-          stealth,
-          survival,
-          weaponry
-        },
-        social: {
-          animalKen,
-          empathy,
-          expression,
-          intimidation,
-          persuasion,
-          socialize,
-          streetwise,
-          subterfuge
-        }
-      },
+      intelligence,
+      wits,
+      resolve,
+      strength,
+      dexterity,
+      stamina,
+      presence,
+      manipulation,
+      composure,
+      academics,
+      computer,
+      crafts,
+      investigation,
+      medicine,
+      occult,
+      politics,
+      science,
+      athletics,
+      brawl,
+      drive,
+      firearms,
+      larceny,
+      stealth,
+      survival,
+      weaponry,
+      animalKen,
+      empathy,
+      expression,
+      intimidation,
+      persuasion,
+      socialize,
+      streetwise,
+      subterfuge,
       size,
       age,
       player,
@@ -603,7 +587,7 @@ export class CharCreateForm extends React.Component {
 export default reduxForm({
   form: 'character-creation',
   initialValues: {
-    name: 'Rengar',
+    name: "Character's Name",
     intelligence: 1,
     wits: 1,
     resolve: 1,
