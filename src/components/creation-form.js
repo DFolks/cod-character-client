@@ -603,7 +603,7 @@ export class CharCreateForm extends React.Component {
 export default reduxForm({
   form: 'character-creation',
   initialValues: {
-    name: 'Rengar',
+    name: "Character's Name",
     intelligence: 1,
     wits: 1,
     resolve: 1,
